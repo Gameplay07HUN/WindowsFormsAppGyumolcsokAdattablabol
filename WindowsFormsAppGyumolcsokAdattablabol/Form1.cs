@@ -81,5 +81,21 @@ namespace WindowsFormsAppGyumolcsokAdattablabol
         {
 
         }
+
+        private void dataGridViewGyumolcsok_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridViewRow rekord= dataGridViewGyumolcsok.SelectedRows[0];
+            if (rekord.Cells["id"].Value==null)
+            {
+                return;
+            }
+            else
+            {
+                textBoxGyumolcsnev.Text = rekord.Cells["nev"].Value.ToString();
+                textBoxId.Text = rekord.Cells["id"].Value.ToString();
+                numericUpDownEgysegar.Value = decimal.Parse(rekord.Cells["egysegar"].Value.ToString());
+                numericUpDownMennyiseg.Value = decimal.Parse(rekord.Cells["mennyiseg"].Value.ToString());
+            }
+        }
     }
 }

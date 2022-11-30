@@ -53,7 +53,7 @@
             this.dataGridViewGyumolcsok.ReadOnly = true;
             this.dataGridViewGyumolcsok.Size = new System.Drawing.Size(800, 347);
             this.dataGridViewGyumolcsok.TabIndex = 0;
-            this.dataGridViewGyumolcsok.SelectionChanged += new System.EventHandler(this.Form1_Load);
+            this.dataGridViewGyumolcsok.SelectionChanged += new System.EventHandler(this.dataGridViewGyumolcsok_SelectionChanged);
             // 
             // groupBoxGyumolcs
             // 
